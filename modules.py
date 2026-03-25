@@ -5,13 +5,20 @@ from datetime import date
 from time import time
 
 # Pip module
-from camelcase import CamelCase
+# from camelcase import CamelCase
+
+# Custom module
+from validator import validate_email
 
 today = date.today()
 timestamp = time()
 
-c = CamelCase()
-result = c.hump("hello there world")
+# c = CamelCase()
+# result = c.hump("hello there world")
 
 
-print(result)
+email = "taharbelhouchat213#gmail.com"
+if validate_email(email):
+    print("Email is valid")
+else:
+    print("Email is bad")
